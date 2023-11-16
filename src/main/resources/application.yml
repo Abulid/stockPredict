@@ -1,1 +1,80 @@
-
+# 公共配置文件
+spring:
+  application:
+    name: springboot-init
+  # 默认 dev 环境
+  profiles:
+    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # session 配置
+  session:
+    # todo 取消注释开启分布式 session（须先配置 Redis）
+    # store-type: redis
+    # 30 天过期
+    timeout: 2592000
+  # 数据库配置
+  # todo 需替换配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://119.91.220.197:3306/test
+    username: root
+    password: qqtang
+    # Druid datasource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 初始化大小
+      initial-size: 5
+      # 最小连接数
+      min-idle: 10
+      # 最大连接数
+      max-active: 20
+      # 获取连接时的最大等待时间
+      max-wait: 60000
+      # 一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      # 多久才进行一次检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置扩展插件：stat-监控统计，log4j-日志，wall-防火墙（防止SQL注入），去掉后，监控界面的sql无法统计
+      filters: stat,wall
+      # 检测连接是否有效的 SQL语句，为空时以下三个配置均无效
+      validation-query: SELECT 1
+      # 申请连接时如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效，默认false，建议开启，不影响性能
+      test-while-idle: true
+  # Redis 配置
+  redis:
+    database: 1
+    host: 119.91.220.197
+    port: 6379
+    timeout: 5000
+    password: qqtang
+  # Elasticsearch 配置
+  #  elasticsearch:
+  #    uris: http://localhost:9200
+  #    username: root
+  #    password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      # 大小限制
+      max-file-size: 10MB
+server:
+  address: 0.0.0.0
+  port: 8111
+  servlet:
+    context-path: /
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值（默认为 1）
+      logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）

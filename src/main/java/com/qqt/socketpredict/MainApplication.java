@@ -2,12 +2,13 @@ package com.qqt.socketpredict;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-public class SocketPredictApplication {
-
+@EnableAsync
+public class MainApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SocketPredictApplication.class, args);
+        SpringApplication.run(MainApplication.class, args);
     }
 
 }
