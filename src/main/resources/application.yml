@@ -1,7 +1,7 @@
 # 公共配置文件
 spring:
   application:
-    name: springboot-init
+    name: stock
   # 默认 dev 环境
   profiles:
     active: dev
@@ -19,7 +19,7 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://119.91.220.197:3306/test
+    url: jdbc:mysql://119.91.220.197:3306/stock
     username: root
     password: qqtang
     # Druid datasource
@@ -50,6 +50,9 @@ spring:
     port: 6379
     timeout: 5000
     password: qqtang
+  cache:
+    redis:
+      time-to-live: 1800000 # 设置数据过期时间为半小时（ms）
   # Elasticsearch 配置
   #  elasticsearch:
   #    uris: http://localhost:9200
@@ -75,6 +78,6 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     db-config:
-      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-field: delFlag # 全局逻辑删除的实体字段名
       logic-delete-value: 1 # 逻辑已删除值（默认为 1）
       logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
