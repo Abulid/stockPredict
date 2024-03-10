@@ -138,6 +138,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.86.Final</version>
+        </dependency>
+
         <!--SpringSecurity启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

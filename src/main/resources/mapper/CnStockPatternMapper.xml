@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockPatternMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockPattern">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="tow_crows" column="tow_crows" jdbcType="SMALLINT"/>
+            <result property="upside_gap_two_crows" column="upside_gap_two_crows" jdbcType="SMALLINT"/>
+            <result property="three_black_crows" column="three_black_crows" jdbcType="SMALLINT"/>
+            <result property="identical_three_crows" column="identical_three_crows" jdbcType="SMALLINT"/>
+            <result property="three_line_strike" column="three_line_strike" jdbcType="SMALLINT"/>
+            <result property="dark_cloud_cover" column="dark_cloud_cover" jdbcType="SMALLINT"/>
+            <result property="evening_doji_star" column="evening_doji_star" jdbcType="SMALLINT"/>
+            <result property="doji_Star" column="doji_Star" jdbcType="SMALLINT"/>
+            <result property="hanging_man" column="hanging_man" jdbcType="SMALLINT"/>
+            <result property="hikkake_pattern" column="hikkake_pattern" jdbcType="SMALLINT"/>
+            <result property="modified_hikkake_pattern" column="modified_hikkake_pattern" jdbcType="SMALLINT"/>
+            <result property="in_neck_pattern" column="in_neck_pattern" jdbcType="SMALLINT"/>
+            <result property="on_neck_pattern" column="on_neck_pattern" jdbcType="SMALLINT"/>
+            <result property="thrusting_pattern" column="thrusting_pattern" jdbcType="SMALLINT"/>
+            <result property="shooting_star" column="shooting_star" jdbcType="SMALLINT"/>
+            <result property="stalled_pattern" column="stalled_pattern" jdbcType="SMALLINT"/>
+            <result property="advance_block" column="advance_block" jdbcType="SMALLINT"/>
+            <result property="high_wave_candle" column="high_wave_candle" jdbcType="SMALLINT"/>
+            <result property="engulfing_pattern" column="engulfing_pattern" jdbcType="SMALLINT"/>
+            <result property="abandoned_baby" column="abandoned_baby" jdbcType="SMALLINT"/>
+            <result property="closing_marubozu" column="closing_marubozu" jdbcType="SMALLINT"/>
+            <result property="doji" column="doji" jdbcType="SMALLINT"/>
+            <result property="up_down_gap" column="up_down_gap" jdbcType="SMALLINT"/>
+            <result property="long_legged_doji" column="long_legged_doji" jdbcType="SMALLINT"/>
+            <result property="rickshaw_man" column="rickshaw_man" jdbcType="SMALLINT"/>
+            <result property="marubozu" column="marubozu" jdbcType="SMALLINT"/>
+            <result property="three_inside_up_down" column="three_inside_up_down" jdbcType="SMALLINT"/>
+            <result property="three_outside_up_down" column="three_outside_up_down" jdbcType="SMALLINT"/>
+            <result property="three_stars_in_the_south" column="three_stars_in_the_south" jdbcType="SMALLINT"/>
+            <result property="three_white_soldiers" column="three_white_soldiers" jdbcType="SMALLINT"/>
+            <result property="belt_hold" column="belt_hold" jdbcType="SMALLINT"/>
+            <result property="breakaway" column="breakaway" jdbcType="SMALLINT"/>
+            <result property="concealing_baby_swallow" column="concealing_baby_swallow" jdbcType="SMALLINT"/>
+            <result property="counterattack" column="counterattack" jdbcType="SMALLINT"/>
+            <result property="dragonfly_doji" column="dragonfly_doji" jdbcType="SMALLINT"/>
+            <result property="evening_star" column="evening_star" jdbcType="SMALLINT"/>
+            <result property="gravestone_doji" column="gravestone_doji" jdbcType="SMALLINT"/>
+            <result property="hammer" column="hammer" jdbcType="SMALLINT"/>
+            <result property="harami_pattern" column="harami_pattern" jdbcType="SMALLINT"/>
+            <result property="harami_cross_pattern" column="harami_cross_pattern" jdbcType="SMALLINT"/>
+            <result property="homing_pigeon" column="homing_pigeon" jdbcType="SMALLINT"/>
+            <result property="inverted_hammer" column="inverted_hammer" jdbcType="SMALLINT"/>
+            <result property="kicking" column="kicking" jdbcType="SMALLINT"/>
+            <result property="kicking_bull_bear" column="kicking_bull_bear" jdbcType="SMALLINT"/>
+            <result property="ladder_bottom" column="ladder_bottom" jdbcType="SMALLINT"/>
+            <result property="long_line_candle" column="long_line_candle" jdbcType="SMALLINT"/>
+            <result property="matching_low" column="matching_low" jdbcType="SMALLINT"/>
+            <result property="mat_hold" column="mat_hold" jdbcType="SMALLINT"/>
+            <result property="morning_doji_star" column="morning_doji_star" jdbcType="SMALLINT"/>
+            <result property="morning_star" column="morning_star" jdbcType="SMALLINT"/>
+            <result property="piercing_pattern" column="piercing_pattern" jdbcType="SMALLINT"/>
+            <result property="rising_falling_three" column="rising_falling_three" jdbcType="SMALLINT"/>
+            <result property="separating_lines" column="separating_lines" jdbcType="SMALLINT"/>
+            <result property="short_line_candle" column="short_line_candle" jdbcType="SMALLINT"/>
+            <result property="spinning_top" column="spinning_top" jdbcType="SMALLINT"/>
+            <result property="stick_sandwich" column="stick_sandwich" jdbcType="SMALLINT"/>
+            <result property="takuri" column="takuri" jdbcType="SMALLINT"/>
+            <result property="tasuki_gap" column="tasuki_gap" jdbcType="SMALLINT"/>
+            <result property="tristar_pattern" column="tristar_pattern" jdbcType="SMALLINT"/>
+            <result property="unique_3_river" column="unique_3_river" jdbcType="SMALLINT"/>
+            <result property="upside_downside_gap" column="upside_downside_gap" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        tow_crows,upside_gap_two_crows,three_black_crows,
+        identical_three_crows,three_line_strike,dark_cloud_cover,
+        evening_doji_star,doji_Star,hanging_man,
+        hikkake_pattern,modified_hikkake_pattern,in_neck_pattern,
+        on_neck_pattern,thrusting_pattern,shooting_star,
+        stalled_pattern,advance_block,high_wave_candle,
+        engulfing_pattern,abandoned_baby,closing_marubozu,
+        doji,up_down_gap,long_legged_doji,
+        rickshaw_man,marubozu,three_inside_up_down,
+        three_outside_up_down,three_stars_in_the_south,three_white_soldiers,
+        belt_hold,breakaway,concealing_baby_swallow,
+        counterattack,dragonfly_doji,evening_star,
+        gravestone_doji,hammer,harami_pattern,
+        harami_cross_pattern,homing_pigeon,inverted_hammer,
+        kicking,kicking_bull_bear,ladder_bottom,
+        long_line_candle,matching_low,mat_hold,
+        morning_doji_star,morning_star,piercing_pattern,
+        rising_falling_three,separating_lines,short_line_candle,
+        spinning_top,stick_sandwich,takuri,
+        tasuki_gap,tristar_pattern,unique_3_river,
+        upside_downside_gap
+    </sql>
+</mapper>

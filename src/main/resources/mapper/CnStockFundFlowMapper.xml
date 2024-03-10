@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockFundFlowMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockFundFlow">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="new_price" column="new_price" jdbcType="FLOAT"/>
+            <result property="change_rate" column="change_rate" jdbcType="FLOAT"/>
+            <result property="fund_amount" column="fund_amount" jdbcType="BIGINT"/>
+            <result property="fund_rate" column="fund_rate" jdbcType="FLOAT"/>
+            <result property="fund_amount_super" column="fund_amount_super" jdbcType="BIGINT"/>
+            <result property="fund_rate_super" column="fund_rate_super" jdbcType="FLOAT"/>
+            <result property="fund_amount_large" column="fund_amount_large" jdbcType="BIGINT"/>
+            <result property="fund_rate_large" column="fund_rate_large" jdbcType="FLOAT"/>
+            <result property="fund_amount_medium" column="fund_amount_medium" jdbcType="BIGINT"/>
+            <result property="fund_rate_medium" column="fund_rate_medium" jdbcType="FLOAT"/>
+            <result property="fund_amount_small" column="fund_amount_small" jdbcType="BIGINT"/>
+            <result property="fund_rate_small" column="fund_rate_small" jdbcType="FLOAT"/>
+            <result property="change_rate_3" column="change_rate_3" jdbcType="FLOAT"/>
+            <result property="fund_amount_3" column="fund_amount_3" jdbcType="BIGINT"/>
+            <result property="fund_rate_3" column="fund_rate_3" jdbcType="FLOAT"/>
+            <result property="fund_amount_super_3" column="fund_amount_super_3" jdbcType="BIGINT"/>
+            <result property="fund_rate_super_3" column="fund_rate_super_3" jdbcType="FLOAT"/>
+            <result property="fund_amount_large_3" column="fund_amount_large_3" jdbcType="BIGINT"/>
+            <result property="fund_rate_large_3" column="fund_rate_large_3" jdbcType="FLOAT"/>
+            <result property="fund_amount_medium_3" column="fund_amount_medium_3" jdbcType="BIGINT"/>
+            <result property="fund_rate_medium_3" column="fund_rate_medium_3" jdbcType="FLOAT"/>
+            <result property="fund_amount_small_3" column="fund_amount_small_3" jdbcType="BIGINT"/>
+            <result property="fund_rate_small_3" column="fund_rate_small_3" jdbcType="FLOAT"/>
+            <result property="change_rate_5" column="change_rate_5" jdbcType="FLOAT"/>
+            <result property="fund_amount_5" column="fund_amount_5" jdbcType="BIGINT"/>
+            <result property="fund_rate_5" column="fund_rate_5" jdbcType="FLOAT"/>
+            <result property="fund_amount_super_5" column="fund_amount_super_5" jdbcType="BIGINT"/>
+            <result property="fund_rate_super_5" column="fund_rate_super_5" jdbcType="FLOAT"/>
+            <result property="fund_amount_large_5" column="fund_amount_large_5" jdbcType="BIGINT"/>
+            <result property="fund_rate_large_5" column="fund_rate_large_5" jdbcType="FLOAT"/>
+            <result property="fund_amount_medium_5" column="fund_amount_medium_5" jdbcType="BIGINT"/>
+            <result property="fund_rate_medium_5" column="fund_rate_medium_5" jdbcType="FLOAT"/>
+            <result property="fund_amount_small_5" column="fund_amount_small_5" jdbcType="BIGINT"/>
+            <result property="fund_rate_small_5" column="fund_rate_small_5" jdbcType="FLOAT"/>
+            <result property="change_rate_10" column="change_rate_10" jdbcType="FLOAT"/>
+            <result property="fund_amount_10" column="fund_amount_10" jdbcType="BIGINT"/>
+            <result property="fund_rate_10" column="fund_rate_10" jdbcType="FLOAT"/>
+            <result property="fund_amount_super_10" column="fund_amount_super_10" jdbcType="BIGINT"/>
+            <result property="fund_rate_super_10" column="fund_rate_super_10" jdbcType="FLOAT"/>
+            <result property="fund_amount_large_10" column="fund_amount_large_10" jdbcType="BIGINT"/>
+            <result property="fund_rate_large_10" column="fund_rate_large_10" jdbcType="FLOAT"/>
+            <result property="fund_amount_medium_10" column="fund_amount_medium_10" jdbcType="BIGINT"/>
+            <result property="fund_rate_medium_10" column="fund_rate_medium_10" jdbcType="FLOAT"/>
+            <result property="fund_amount_small_10" column="fund_amount_small_10" jdbcType="BIGINT"/>
+            <result property="fund_rate_small_10" column="fund_rate_small_10" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        new_price,change_rate,fund_amount,
+        fund_rate,fund_amount_super,fund_rate_super,
+        fund_amount_large,fund_rate_large,fund_amount_medium,
+        fund_rate_medium,fund_amount_small,fund_rate_small,
+        change_rate_3,fund_amount_3,fund_rate_3,
+        fund_amount_super_3,fund_rate_super_3,fund_amount_large_3,
+        fund_rate_large_3,fund_amount_medium_3,fund_rate_medium_3,
+        fund_amount_small_3,fund_rate_small_3,change_rate_5,
+        fund_amount_5,fund_rate_5,fund_amount_super_5,
+        fund_rate_super_5,fund_amount_large_5,fund_rate_large_5,
+        fund_amount_medium_5,fund_rate_medium_5,fund_amount_small_5,
+        fund_rate_small_5,change_rate_10,fund_amount_10,
+        fund_rate_10,fund_amount_super_10,fund_rate_super_10,
+        fund_amount_large_10,fund_rate_large_10,fund_amount_medium_10,
+        fund_rate_medium_10,fund_amount_small_10,fund_rate_small_10
+    </sql>
+</mapper>

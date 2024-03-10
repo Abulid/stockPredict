@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockBonusMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockBonus">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="convertible_total_rate" column="convertible_total_rate" jdbcType="FLOAT"/>
+            <result property="convertible_rate" column="convertible_rate" jdbcType="FLOAT"/>
+            <result property="convertible_transfer_rate" column="convertible_transfer_rate" jdbcType="FLOAT"/>
+            <result property="bonusaward_rate" column="bonusaward_rate" jdbcType="FLOAT"/>
+            <result property="bonusaward_yield" column="bonusaward_yield" jdbcType="FLOAT"/>
+            <result property="basic_eps" column="basic_eps" jdbcType="FLOAT"/>
+            <result property="bvps" column="bvps" jdbcType="FLOAT"/>
+            <result property="per_capital_reserve" column="per_capital_reserve" jdbcType="FLOAT"/>
+            <result property="per_unassign_profit" column="per_unassign_profit" jdbcType="FLOAT"/>
+            <result property="netprofit_yoy_ratio" column="netprofit_yoy_ratio" jdbcType="FLOAT"/>
+            <result property="total_shares" column="total_shares" jdbcType="BIGINT"/>
+            <result property="plan_date" column="plan_date" jdbcType="DATE"/>
+            <result property="record_date" column="record_date" jdbcType="DATE"/>
+            <result property="ex_dividend_date" column="ex_dividend_date" jdbcType="DATE"/>
+            <result property="progress" column="progress" jdbcType="VARCHAR"/>
+            <result property="report_date" column="report_date" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        convertible_total_rate,convertible_rate,convertible_transfer_rate,
+        bonusaward_rate,bonusaward_yield,basic_eps,
+        bvps,per_capital_reserve,per_unassign_profit,
+        netprofit_yoy_ratio,total_shares,plan_date,
+        record_date,ex_dividend_date,progress,
+        report_date
+    </sql>
+</mapper>

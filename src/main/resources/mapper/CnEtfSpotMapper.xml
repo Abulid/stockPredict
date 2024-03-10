@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnEtfSpotMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnEtfSpot">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="new_price" column="new_price" jdbcType="FLOAT"/>
+            <result property="change_rate" column="change_rate" jdbcType="FLOAT"/>
+            <result property="ups_downs" column="ups_downs" jdbcType="FLOAT"/>
+            <result property="volume" column="volume" jdbcType="BIGINT"/>
+            <result property="deal_amount" column="deal_amount" jdbcType="BIGINT"/>
+            <result property="open_price" column="open_price" jdbcType="FLOAT"/>
+            <result property="high_price" column="high_price" jdbcType="FLOAT"/>
+            <result property="low_price" column="low_price" jdbcType="FLOAT"/>
+            <result property="pre_close_price" column="pre_close_price" jdbcType="FLOAT"/>
+            <result property="turnoverrate" column="turnoverrate" jdbcType="FLOAT"/>
+            <result property="total_market_cap" column="total_market_cap" jdbcType="BIGINT"/>
+            <result property="free_cap" column="free_cap" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        new_price,change_rate,ups_downs,
+        volume,deal_amount,open_price,
+        high_price,low_price,pre_close_price,
+        turnoverrate,total_market_cap,free_cap
+    </sql>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockTopMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockTop">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="ranking_times" column="ranking_times" jdbcType="FLOAT"/>
+            <result property="sum_buy" column="sum_buy" jdbcType="FLOAT"/>
+            <result property="sum_sell" column="sum_sell" jdbcType="FLOAT"/>
+            <result property="net_amount" column="net_amount" jdbcType="FLOAT"/>
+            <result property="buy_seat" column="buy_seat" jdbcType="FLOAT"/>
+            <result property="sell_seat" column="sell_seat" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        ranking_times,sum_buy,sum_sell,
+        net_amount,buy_seat,sell_seat
+    </sql>
+</mapper>

@@ -80,8 +80,6 @@ public class UserController {
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"注册失败，您的输入非法");
         }
         return userService.register(userRequest);
-
-
     }
 
     /**

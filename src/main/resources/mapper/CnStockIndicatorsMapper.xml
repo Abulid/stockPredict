@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockIndicatorsMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockIndicators">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="close" column="close" jdbcType="FLOAT"/>
+            <result property="macd" column="macd" jdbcType="FLOAT"/>
+            <result property="macds" column="macds" jdbcType="FLOAT"/>
+            <result property="macdh" column="macdh" jdbcType="FLOAT"/>
+            <result property="kdjk" column="kdjk" jdbcType="FLOAT"/>
+            <result property="kdjd" column="kdjd" jdbcType="FLOAT"/>
+            <result property="kdjj" column="kdjj" jdbcType="FLOAT"/>
+            <result property="boll_ub" column="boll_ub" jdbcType="FLOAT"/>
+            <result property="boll" column="boll" jdbcType="FLOAT"/>
+            <result property="boll_lb" column="boll_lb" jdbcType="FLOAT"/>
+            <result property="trix" column="trix" jdbcType="FLOAT"/>
+            <result property="trix_20_sma" column="trix_20_sma" jdbcType="FLOAT"/>
+            <result property="tema" column="tema" jdbcType="FLOAT"/>
+            <result property="cr" column="cr" jdbcType="FLOAT"/>
+            <result property="cr_ma1" column="cr_ma1" jdbcType="FLOAT"/>
+            <result property="cr_ma2" column="cr_ma2" jdbcType="FLOAT"/>
+            <result property="cr_ma3" column="cr_ma3" jdbcType="FLOAT"/>
+            <result property="rsi_6" column="rsi_6" jdbcType="FLOAT"/>
+            <result property="rsi_12" column="rsi_12" jdbcType="FLOAT"/>
+            <result property="rsi" column="rsi" jdbcType="FLOAT"/>
+            <result property="rsi_24" column="rsi_24" jdbcType="FLOAT"/>
+            <result property="vr" column="vr" jdbcType="FLOAT"/>
+            <result property="vr_6_sma" column="vr_6_sma" jdbcType="FLOAT"/>
+            <result property="roc" column="roc" jdbcType="FLOAT"/>
+            <result property="rocma" column="rocma" jdbcType="FLOAT"/>
+            <result property="rocema" column="rocema" jdbcType="FLOAT"/>
+            <result property="pdi" column="pdi" jdbcType="FLOAT"/>
+            <result property="mdi" column="mdi" jdbcType="FLOAT"/>
+            <result property="dx" column="dx" jdbcType="FLOAT"/>
+            <result property="adx" column="adx" jdbcType="FLOAT"/>
+            <result property="adxr" column="adxr" jdbcType="FLOAT"/>
+            <result property="wr_6" column="wr_6" jdbcType="FLOAT"/>
+            <result property="wr_10" column="wr_10" jdbcType="FLOAT"/>
+            <result property="wr_14" column="wr_14" jdbcType="FLOAT"/>
+            <result property="cci" column="cci" jdbcType="FLOAT"/>
+            <result property="cci_84" column="cci_84" jdbcType="FLOAT"/>
+            <result property="tr" column="tr" jdbcType="FLOAT"/>
+            <result property="atr" column="atr" jdbcType="FLOAT"/>
+            <result property="dma" column="dma" jdbcType="FLOAT"/>
+            <result property="dma_10_sma" column="dma_10_sma" jdbcType="FLOAT"/>
+            <result property="obv" column="obv" jdbcType="FLOAT"/>
+            <result property="sar" column="sar" jdbcType="FLOAT"/>
+            <result property="psy" column="psy" jdbcType="FLOAT"/>
+            <result property="psyma" column="psyma" jdbcType="FLOAT"/>
+            <result property="br" column="br" jdbcType="FLOAT"/>
+            <result property="ar" column="ar" jdbcType="FLOAT"/>
+            <result property="emv" column="emv" jdbcType="FLOAT"/>
+            <result property="emva" column="emva" jdbcType="FLOAT"/>
+            <result property="bias" column="bias" jdbcType="FLOAT"/>
+            <result property="mfi" column="mfi" jdbcType="FLOAT"/>
+            <result property="mfisma" column="mfisma" jdbcType="FLOAT"/>
+            <result property="vwma" column="vwma" jdbcType="FLOAT"/>
+            <result property="mvwma" column="mvwma" jdbcType="FLOAT"/>
+            <result property="ppo" column="ppo" jdbcType="FLOAT"/>
+            <result property="ppos" column="ppos" jdbcType="FLOAT"/>
+            <result property="ppoh" column="ppoh" jdbcType="FLOAT"/>
+            <result property="wt1" column="wt1" jdbcType="FLOAT"/>
+            <result property="wt2" column="wt2" jdbcType="FLOAT"/>
+            <result property="supertrend_ub" column="supertrend_ub" jdbcType="FLOAT"/>
+            <result property="supertrend" column="supertrend" jdbcType="FLOAT"/>
+            <result property="supertrend_lb" column="supertrend_lb" jdbcType="FLOAT"/>
+            <result property="dpo" column="dpo" jdbcType="FLOAT"/>
+            <result property="madpo" column="madpo" jdbcType="FLOAT"/>
+            <result property="vhf" column="vhf" jdbcType="FLOAT"/>
+            <result property="rvi" column="rvi" jdbcType="FLOAT"/>
+            <result property="rvis" column="rvis" jdbcType="FLOAT"/>
+            <result property="fi" column="fi" jdbcType="FLOAT"/>
+            <result property="force_2" column="force_2" jdbcType="FLOAT"/>
+            <result property="force_13" column="force_13" jdbcType="FLOAT"/>
+            <result property="ene_ue" column="ene_ue" jdbcType="FLOAT"/>
+            <result property="ene" column="ene" jdbcType="FLOAT"/>
+            <result property="ene_le" column="ene_le" jdbcType="FLOAT"/>
+            <result property="stochrsi_k" column="stochrsi_k" jdbcType="FLOAT"/>
+            <result property="stochrsi_d" column="stochrsi_d" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        close,macd,macds,
+        macdh,kdjk,kdjd,
+        kdjj,boll_ub,boll,
+        boll_lb,trix,trix_20_sma,
+        tema,cr,cr_ma1,
+        cr_ma2,cr_ma3,rsi_6,
+        rsi_12,rsi,rsi_24,
+        vr,vr_6_sma,roc,
+        rocma,rocema,pdi,
+        mdi,dx,adx,
+        adxr,wr_6,wr_10,
+        wr_14,cci,cci_84,
+        tr,atr,dma,
+        dma_10_sma,obv,sar,
+        psy,psyma,br,
+        ar,emv,emva,
+        bias,mfi,mfisma,
+        vwma,mvwma,ppo,
+        ppos,ppoh,wt1,
+        wt2,supertrend_ub,supertrend,
+        supertrend_lb,dpo,madpo,
+        vhf,rvi,rvis,
+        fi,force_2,force_13,
+        ene_ue,ene,ene_le,
+        stochrsi_k,stochrsi_d
+    </sql>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockBlocktradeMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockBlocktrade">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="new_price" column="new_price" jdbcType="FLOAT"/>
+            <result property="change_rate" column="change_rate" jdbcType="FLOAT"/>
+            <result property="average_price" column="average_price" jdbcType="FLOAT"/>
+            <result property="overflow_rate" column="overflow_rate" jdbcType="FLOAT"/>
+            <result property="trade_number" column="trade_number" jdbcType="FLOAT"/>
+            <result property="sum_volume" column="sum_volume" jdbcType="FLOAT"/>
+            <result property="sum_turnover" column="sum_turnover" jdbcType="FLOAT"/>
+            <result property="turnover_market_rate" column="turnover_market_rate" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        new_price,change_rate,average_price,
+        overflow_rate,trade_number,sum_volume,
+        sum_turnover,turnover_market_rate
+    </sql>
+</mapper>

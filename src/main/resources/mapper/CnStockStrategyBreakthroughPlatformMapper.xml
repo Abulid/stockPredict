@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.CnStockStrategyBreakthroughPlatformMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.CnStockStrategyBreakthroughPlatform">
+            <id property="date" column="date" jdbcType="DATE"/>
+            <id property="code" column="code" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="rate_1" column="rate_1" jdbcType="FLOAT"/>
+            <result property="rate_2" column="rate_2" jdbcType="FLOAT"/>
+            <result property="rate_3" column="rate_3" jdbcType="FLOAT"/>
+            <result property="rate_4" column="rate_4" jdbcType="FLOAT"/>
+            <result property="rate_5" column="rate_5" jdbcType="FLOAT"/>
+            <result property="rate_6" column="rate_6" jdbcType="FLOAT"/>
+            <result property="rate_7" column="rate_7" jdbcType="FLOAT"/>
+            <result property="rate_8" column="rate_8" jdbcType="FLOAT"/>
+            <result property="rate_9" column="rate_9" jdbcType="FLOAT"/>
+            <result property="rate_10" column="rate_10" jdbcType="FLOAT"/>
+            <result property="rate_11" column="rate_11" jdbcType="FLOAT"/>
+            <result property="rate_12" column="rate_12" jdbcType="FLOAT"/>
+            <result property="rate_13" column="rate_13" jdbcType="FLOAT"/>
+            <result property="rate_14" column="rate_14" jdbcType="FLOAT"/>
+            <result property="rate_15" column="rate_15" jdbcType="FLOAT"/>
+            <result property="rate_16" column="rate_16" jdbcType="FLOAT"/>
+            <result property="rate_17" column="rate_17" jdbcType="FLOAT"/>
+            <result property="rate_18" column="rate_18" jdbcType="FLOAT"/>
+            <result property="rate_19" column="rate_19" jdbcType="FLOAT"/>
+            <result property="rate_20" column="rate_20" jdbcType="FLOAT"/>
+            <result property="rate_21" column="rate_21" jdbcType="FLOAT"/>
+            <result property="rate_22" column="rate_22" jdbcType="FLOAT"/>
+            <result property="rate_23" column="rate_23" jdbcType="FLOAT"/>
+            <result property="rate_24" column="rate_24" jdbcType="FLOAT"/>
+            <result property="rate_25" column="rate_25" jdbcType="FLOAT"/>
+            <result property="rate_26" column="rate_26" jdbcType="FLOAT"/>
+            <result property="rate_27" column="rate_27" jdbcType="FLOAT"/>
+            <result property="rate_28" column="rate_28" jdbcType="FLOAT"/>
+            <result property="rate_29" column="rate_29" jdbcType="FLOAT"/>
+            <result property="rate_30" column="rate_30" jdbcType="FLOAT"/>
+            <result property="rate_31" column="rate_31" jdbcType="FLOAT"/>
+            <result property="rate_32" column="rate_32" jdbcType="FLOAT"/>
+            <result property="rate_33" column="rate_33" jdbcType="FLOAT"/>
+            <result property="rate_34" column="rate_34" jdbcType="FLOAT"/>
+            <result property="rate_35" column="rate_35" jdbcType="FLOAT"/>
+            <result property="rate_36" column="rate_36" jdbcType="FLOAT"/>
+            <result property="rate_37" column="rate_37" jdbcType="FLOAT"/>
+            <result property="rate_38" column="rate_38" jdbcType="FLOAT"/>
+            <result property="rate_39" column="rate_39" jdbcType="FLOAT"/>
+            <result property="rate_40" column="rate_40" jdbcType="FLOAT"/>
+            <result property="rate_41" column="rate_41" jdbcType="FLOAT"/>
+            <result property="rate_42" column="rate_42" jdbcType="FLOAT"/>
+            <result property="rate_43" column="rate_43" jdbcType="FLOAT"/>
+            <result property="rate_44" column="rate_44" jdbcType="FLOAT"/>
+            <result property="rate_45" column="rate_45" jdbcType="FLOAT"/>
+            <result property="rate_46" column="rate_46" jdbcType="FLOAT"/>
+            <result property="rate_47" column="rate_47" jdbcType="FLOAT"/>
+            <result property="rate_48" column="rate_48" jdbcType="FLOAT"/>
+            <result property="rate_49" column="rate_49" jdbcType="FLOAT"/>
+            <result property="rate_50" column="rate_50" jdbcType="FLOAT"/>
+            <result property="rate_51" column="rate_51" jdbcType="FLOAT"/>
+            <result property="rate_52" column="rate_52" jdbcType="FLOAT"/>
+            <result property="rate_53" column="rate_53" jdbcType="FLOAT"/>
+            <result property="rate_54" column="rate_54" jdbcType="FLOAT"/>
+            <result property="rate_55" column="rate_55" jdbcType="FLOAT"/>
+            <result property="rate_56" column="rate_56" jdbcType="FLOAT"/>
+            <result property="rate_57" column="rate_57" jdbcType="FLOAT"/>
+            <result property="rate_58" column="rate_58" jdbcType="FLOAT"/>
+            <result property="rate_59" column="rate_59" jdbcType="FLOAT"/>
+            <result property="rate_60" column="rate_60" jdbcType="FLOAT"/>
+            <result property="rate_61" column="rate_61" jdbcType="FLOAT"/>
+            <result property="rate_62" column="rate_62" jdbcType="FLOAT"/>
+            <result property="rate_63" column="rate_63" jdbcType="FLOAT"/>
+            <result property="rate_64" column="rate_64" jdbcType="FLOAT"/>
+            <result property="rate_65" column="rate_65" jdbcType="FLOAT"/>
+            <result property="rate_66" column="rate_66" jdbcType="FLOAT"/>
+            <result property="rate_67" column="rate_67" jdbcType="FLOAT"/>
+            <result property="rate_68" column="rate_68" jdbcType="FLOAT"/>
+            <result property="rate_69" column="rate_69" jdbcType="FLOAT"/>
+            <result property="rate_70" column="rate_70" jdbcType="FLOAT"/>
+            <result property="rate_71" column="rate_71" jdbcType="FLOAT"/>
+            <result property="rate_72" column="rate_72" jdbcType="FLOAT"/>
+            <result property="rate_73" column="rate_73" jdbcType="FLOAT"/>
+            <result property="rate_74" column="rate_74" jdbcType="FLOAT"/>
+            <result property="rate_75" column="rate_75" jdbcType="FLOAT"/>
+            <result property="rate_76" column="rate_76" jdbcType="FLOAT"/>
+            <result property="rate_77" column="rate_77" jdbcType="FLOAT"/>
+            <result property="rate_78" column="rate_78" jdbcType="FLOAT"/>
+            <result property="rate_79" column="rate_79" jdbcType="FLOAT"/>
+            <result property="rate_80" column="rate_80" jdbcType="FLOAT"/>
+            <result property="rate_81" column="rate_81" jdbcType="FLOAT"/>
+            <result property="rate_82" column="rate_82" jdbcType="FLOAT"/>
+            <result property="rate_83" column="rate_83" jdbcType="FLOAT"/>
+            <result property="rate_84" column="rate_84" jdbcType="FLOAT"/>
+            <result property="rate_85" column="rate_85" jdbcType="FLOAT"/>
+            <result property="rate_86" column="rate_86" jdbcType="FLOAT"/>
+            <result property="rate_87" column="rate_87" jdbcType="FLOAT"/>
+            <result property="rate_88" column="rate_88" jdbcType="FLOAT"/>
+            <result property="rate_89" column="rate_89" jdbcType="FLOAT"/>
+            <result property="rate_90" column="rate_90" jdbcType="FLOAT"/>
+            <result property="rate_91" column="rate_91" jdbcType="FLOAT"/>
+            <result property="rate_92" column="rate_92" jdbcType="FLOAT"/>
+            <result property="rate_93" column="rate_93" jdbcType="FLOAT"/>
+            <result property="rate_94" column="rate_94" jdbcType="FLOAT"/>
+            <result property="rate_95" column="rate_95" jdbcType="FLOAT"/>
+            <result property="rate_96" column="rate_96" jdbcType="FLOAT"/>
+            <result property="rate_97" column="rate_97" jdbcType="FLOAT"/>
+            <result property="rate_98" column="rate_98" jdbcType="FLOAT"/>
+            <result property="rate_99" column="rate_99" jdbcType="FLOAT"/>
+            <result property="rate_100" column="rate_100" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        date,code,name,
+        rate_1,rate_2,rate_3,
+        rate_4,rate_5,rate_6,
+        rate_7,rate_8,rate_9,
+        rate_10,rate_11,rate_12,
+        rate_13,rate_14,rate_15,
+        rate_16,rate_17,rate_18,
+        rate_19,rate_20,rate_21,
+        rate_22,rate_23,rate_24,
+        rate_25,rate_26,rate_27,
+        rate_28,rate_29,rate_30,
+        rate_31,rate_32,rate_33,
+        rate_34,rate_35,rate_36,
+        rate_37,rate_38,rate_39,
+        rate_40,rate_41,rate_42,
+        rate_43,rate_44,rate_45,
+        rate_46,rate_47,rate_48,
+        rate_49,rate_50,rate_51,
+        rate_52,rate_53,rate_54,
+        rate_55,rate_56,rate_57,
+        rate_58,rate_59,rate_60,
+        rate_61,rate_62,rate_63,
+        rate_64,rate_65,rate_66,
+        rate_67,rate_68,rate_69,
+        rate_70,rate_71,rate_72,
+        rate_73,rate_74,rate_75,
+        rate_76,rate_77,rate_78,
+        rate_79,rate_80,rate_81,
+        rate_82,rate_83,rate_84,
+        rate_85,rate_86,rate_87,
+        rate_88,rate_89,rate_90,
+        rate_91,rate_92,rate_93,
+        rate_94,rate_95,rate_96,
+        rate_97,rate_98,rate_99,
+        rate_100
+    </sql>
+</mapper>
