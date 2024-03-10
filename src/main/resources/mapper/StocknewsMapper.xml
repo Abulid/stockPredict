@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqt.stockpredict.mapper.StocknewsMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqt.stockpredict.model.entity.Stocknews">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="tittle" column="tittle" jdbcType="VARCHAR"/>
+            <result property="time" column="time" jdbcType="VARCHAR"/>
+            <result property="source" column="source" jdbcType="VARCHAR"/>
+            <result property="category" column="category" jdbcType="VARCHAR"/>
+            <result property="picture" column="picture" jdbcType="VARCHAR"/>
+            <result property="phoneUrl" column="phoneUrl" jdbcType="VARCHAR"/>
+            <result property="webUrl" column="webUrl" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,tittle,time,
+        source,category,picture,
+        phoneUrl,webUrl,content
+    </sql>
+</mapper>
